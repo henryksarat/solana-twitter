@@ -66,7 +66,7 @@ solana address -k target/deploy/solana_twitter-keypair.json
 
 ## Possible causes of error when deploying to devnet to try and debug step by step:
 
-1. Set **cluster** to **devnet**
+1. Set **cluster** to **devnet** (in Anchor.toml)
 
 2. Make a new key and airdrop ~10 sol
 
