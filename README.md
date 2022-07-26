@@ -39,7 +39,7 @@ solana config set --url devnet
 solana airdrop 2 {public_key}
 solana airdrop 2 {public_key}
 
-In Anchor.toml ensure that cluster is equal to localnet, like:
+In Anchor.toml ensure that cluster is equal to devnet, like:
 [provider]
 cluster = "devnet"
 
