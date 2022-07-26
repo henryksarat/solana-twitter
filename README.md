@@ -62,3 +62,42 @@ solana address -k localkey.json
 ```
 solana address -k target/deploy/solana_twitter-keypair.json
 ```
+
+
+**Possible causes of error when deploying to devnet to try and debug step by step:**
+
+1. Set **cluster** to **devnet**
+
+2. Make a new key and airdrop ~10 sol
+
+```
+solana-keygen new -o localkey.json
+solana address -k localkey.json
+
+# split up because of rate limiting
+solana airdrop 2 {public_key}
+solana airdrop 2 {public_key}
+solana airdrop 2 {public_key}
+solana airdrop 2 {public_key}
+solana airdrop 2 {public_key}
+```
+
+3. Set the wallet address of the location of the key from #1 in Anchor.toml
+
+4. Delete the fiiles in target/deploy/*
+
+5. execute
+
+```
+anchor build
+anchor deploy
+```
+
+6. Take the public key from the deploy and add to the top of program/solana/src/lib.rs and to the desired programs in Anchor.toml
+
+7. execute 
+
+```
+anchor build
+anchor deploy
+```
