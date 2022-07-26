@@ -9,7 +9,7 @@ After tweet was saved via smart contract and fetched to display:
 ![This is an image](https://github.com/henryksarat/solana-twitter/blob/main/assets/solana_twitter_two.png)
 
 
-Running unit tests
+**Running unit tests**
 
 Step 1:
 
@@ -30,9 +30,7 @@ Step 3:
 anchor test
 ```
 
-
-Run the UI against devnet:
-
+**Run the UI against devnet:**
 ```
 anchor run copy-idl
 
@@ -53,15 +51,14 @@ cd app
 npm run serve:devnet
 ```
 
-
-How to generate a key and get the address again:
+**How to generate a key and get the address again:**
 ```
 solana-keygen new -o localkey.json
 solana address -k localkey.json
 ```
 
 
-How to get the address of the built program:
+**How to get the address of the built program:**
 ```
 solana address -k target/deploy/solana_twitter-keypair.json
 ```
